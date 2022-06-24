@@ -1,0 +1,25 @@
+# OS generated files #
+.env
+.aws
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+ehthumbs.db
+Thumbs.db
+nbproject/
+.idea/
+.git/
+.vscode
+/.project
+*.log
+
+**/private
+
+**/node_modules/
+**/dist
+*.js.ignore
+
+# electron
+out/
+
