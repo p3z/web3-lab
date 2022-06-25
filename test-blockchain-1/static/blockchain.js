@@ -6,6 +6,8 @@ const unhash_form = document.querySelector("#unhash-form");
 let block_count = 0;
 let prev_hash = 0;
 
+let 
+
 
 
 

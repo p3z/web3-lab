@@ -1,0 +1,64 @@
+<html>
+    <head>
+      <title>Blockchain test</title>
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+      <script defer  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <link rel="stylesheet" href="../static/style.css">
+    </head>
+    
+     
+
+
+    <body>
+
+       <div class="container">
+
+       <form id="unhash-form" action="/unhash" method ="POST">
+         <input type="text" name="hash_value" placeholder="Hash value">
+         <input type="submit" value = "Decrypt hash">
+       </form>
+
+
+        <form class="data-form" action = "/add_block" method="POST">
+           
+            <div class="mb-3">
+                <label for="block-data" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="block-data" name="block_data" rows="3"></textarea>
+            </div>
+
+            <fieldset disabled>
+
+              <div class="mb-3">
+                <label for="block-number" class="form-label">Block number</label>
+                <input type="text" class="form-control disabled" id="block-number" name = "block_number" aria-describedby="block-number" value="0">
+              </div>
+  
+  
+              <div class="mb-3">
+                  <label for="previous-hash" class="form-label">Hash</label>
+                  <input type="text" class="form-control" id="previous-hash" name = "previous_hash" aria-describedby="previous-hash" value = 0>
+              </div>
+
+            </fieldset>
+
+          
+           
+            
+            <button id="" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class="blockchain">
+
+        </div>
+
+  
+
+       <script src = "../static/blockchain.js"></script>
+
+        
+    </body>
+</html>
