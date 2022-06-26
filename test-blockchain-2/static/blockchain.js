@@ -6,39 +6,10 @@ window.onload = () => {
 // let block_count = 0;
 // let prev_hash = 0;
 
-////// NEW///////////////////////////////////////////////////////////////////////
-
-class Blockchain {
-
-    constructor(){
-        this.chain = [];
-        this.add__new_block(proof = 1, previous_hash = "0"); // calling this in constructor = genesis block
-
-    }
-
-    add__new_block(proof, previous_hash){
-        let block = {
-            index: this.chain.length + 1,
-            timestamp: `${Date.now()}`,
-            proof: proof,
-            previous_hash: previous_hash,
-            data: {}
-        };
-
-        this.chain.push(block);
-        return block;
-    }
-
-
-}
-
-
-/////////////////////////////////////////////////////////////////////////////////
 
 
 
-
-// form.onsubmit = (e) => {
+ form.onsubmit = (e) => {
 //     e.preventDefault();
 
 //     let formData = new FormData(e.target);
@@ -65,7 +36,7 @@ class Blockchain {
 //       })
     
     
-// }
+} // form handler
 
 // unhash_form.onsubmit = (e) => {
 //     e.preventDefault();
