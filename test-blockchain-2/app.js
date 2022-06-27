@@ -40,17 +40,10 @@ app.post('/mine_block', (req, res) => {
   let previous_proof = previous_block.proof;
   let proof = blockchain_inst.proof_of_work(previous_proof);
   let previous_hash = blockchain_inst.get_block_hash(previous_block);
-  let block = blockchain_inst.add__new_block(proof, previous_hash);
+  blockchain_inst.add__new_block(proof, previous_hash);
 
+  res.redirect('back');
 
-
-  console.log("Previous hash:")
-  console.log(previous_hash)
-  console.log("New block")
-  console.log(block)
-  let blockchain_state = JSON.stringify(blockchain_inst.chain);
-
-  res.render('index', {chain: blockchain_state});
 });
 
 app.listen(port, () => {
