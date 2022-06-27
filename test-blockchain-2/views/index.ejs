@@ -53,13 +53,13 @@
 
   
 
+       <script src="../static/frontend.js"></script>
        <script>
             let chain = document.querySelector(".blockchain");
-            let blockchain_state = chain.dataset.chain;
-            console.log(chain)
-            console.log(JSON.parse(blockchain_state))
+            let blockchain_state = JSON.parse(chain.dataset.chain);
+
+            create_new_block(blockchain_state[0])
        </script>
-       <!-- <script src = "../static/frontend.js"></script> -->
 
         
     </body>
