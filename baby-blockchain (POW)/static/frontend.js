@@ -2,6 +2,7 @@ function create_new_block(block){
 
     let blockchain = document.querySelector(".blockchain");
 
+    let col = document.createElement("div");
     let card = document.createElement("div");
     let card_body = document.createElement("div");
     let title = document.createElement("h5");
@@ -9,9 +10,10 @@ function create_new_block(block){
     let data_hash = document.createElement("p");
 
 
-    card.classList.add("card");
-    card_body.classList.add("card-body");
-    title.classList.add("saved-block-number");
+    col.classList.add("col-md-4", "mb-5");
+    card.classList.add("card", "h-100");
+    card_body.classList.add("card-body", "card-text");
+    title.classList.add("saved-block-number", "card-title");
 
     title.textContent = `Block number: ${block.index}`;
     data_body.textContent = `Data: ${block.data}`;
@@ -28,16 +30,3 @@ blockchain.append(card);
 
 
 }
-
-// function update_form(){
-//     let block_input = document.getElementById("block-number");
-//     let hash_input = document.getElementById("previous-hash");
-
-//     console.log(block_input)
-//     console.log(block_count)
-
-//     block_input.value = block_count;
-    
-//     hash_input.value = prev_hash;
-
-// }

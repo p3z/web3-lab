@@ -8,6 +8,7 @@ form{
     display: inline-block;
     margin: 5px;
     white-space: wrap;
+    overflow: hidden;
 }
 
 .blockchain{
