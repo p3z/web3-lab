@@ -35,6 +35,7 @@ class Blockchain {
       return block;
   }
 
+  // Returns last block of chain (in array)
   get_previous_block = () => {
       return this.chain.at(-1);
   }
@@ -53,15 +54,17 @@ class Blockchain {
                 .digest('hex');
 
         if (hash.substr(0, 4) === "0000"){
+          console.log("Hash passed!");
+          console.log(hash)
           check_proof = true;
         } else {
+          console.log("Hash failed!")
           new_proof++;
         }
 
-        return new_proof;
-
-
       }
+
+      return new_proof;
   }
 
   get_block_hash = (block) => {
@@ -126,7 +129,7 @@ app.get('/mine_block', (req, res) => {
 
     let previous_block = blockchain_inst.get_previous_block();
     let previous_proof = previous_block.proof;
-    let proof = blockchain_inst.proof_of_work(1);
+    let proof = blockchain_inst.proof_of_work(previous_proof);
     let previous_hash = blockchain_inst.get_block_hash(previous_block);
 
     let block = blockchain_inst.add__new_block(proof, previous_hash);
@@ -177,5 +180,5 @@ app.get('/mine_block', (req, res) => {
 // })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Blockchain app listening on port ${port}`)
 })
