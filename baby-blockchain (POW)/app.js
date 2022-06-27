@@ -39,7 +39,7 @@ app.post('/mine_block', (req, res) => {
   let previous_proof = previous_block.proof;
   let proof = blockchain_inst.proof_of_work(previous_proof);
   let previous_hash = blockchain_inst.get_block_hash(previous_block);
-  blockchain_inst.add__new_block(proof, previous_hash);
+  blockchain_inst.add_new_block(proof, previous_hash);
 
   res.redirect('back');
 

@@ -4,10 +4,10 @@ class Blockchain {
 
     constructor(){
         this.chain = [];
-        this.add__new_block(1, "0"); // genesis block inits proof as 1, prev_hash as 0
+        this.add_new_block(1, "0"); // genesis block inits proof as 1, prev_hash as 0
     }
   
-    add__new_block(proof, previous_hash){
+    add_new_block(proof, previous_hash){
         let block = {
             index: this.chain.length + 1,
             timestamp: `${Date.now()}`,
