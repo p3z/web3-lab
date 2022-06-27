@@ -17,13 +17,7 @@
 
        <div class="container">
 
-       <form id="unhash-form" action="/unhash" method ="POST">
-         <input type="text" name="hash_value" placeholder="Hash value">
-         <input type="submit" value = "Decrypt hash">
-       </form>
-
-
-        <form class="data-form" action = "/add_block" method="POST">
+        <form class="data-form" action = "/mine_block" method="POST">
            
             <div class="mb-3">
                 <label for="block-data" class="form-label">Example textarea</label>
@@ -51,13 +45,21 @@
             <button id="" type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-        <div class="blockchain">
+        <h1>The chain: </h1>
+
+        <div class="blockchain" data-chain = '<%- chain %>'>
 
         </div>
 
   
 
-       <script src = "../static/blockchain.js"></script>
+       <script>
+            let chain = document.querySelector(".blockchain");
+            let blockchain_state = chain.dataset.chain;
+            console.log(chain)
+            console.log(JSON.parse(blockchain_state))
+       </script>
+       <!-- <script src = "../static/frontend.js"></script> -->
 
         
     </body>
