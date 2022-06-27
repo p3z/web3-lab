@@ -48,9 +48,9 @@ app.post('/mine_block', (req, res) => {
   console.log(previous_hash)
   console.log("New block")
   console.log(block)
+  let blockchain_state = JSON.stringify(blockchain_inst.chain);
 
-  return true;
-  //res.render('index');
+  res.render('index', {chain: blockchain_state});
 });
 
 app.listen(port, () => {
