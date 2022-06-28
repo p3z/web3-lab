@@ -9,6 +9,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../static/theme-styles.css" rel="stylesheet" />
         <link href="../static/style.css" rel="stylesheet" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     
     <body>
@@ -50,7 +51,12 @@
           
                       
                       <button id="" type="submit" class="btn btn-primary">Mine new block</button>
+
+
+                      
                   </form>
+
+                  
                 </div>
             </div>
 
@@ -61,6 +67,10 @@
                   <p class="text-white m-0">This is a visualisation of the chain that is built in JavaScript</p>
                   <p class="text-white m-0">Use the 'Mine new block' button to add new blocks to the chain</p>
                   <p class="text-white m-0">The chain is scrollable on the X axis</p>
+
+                  <p>
+                    <button class="js-valid-chain-btn btn btn-primary">Check chain validity</button>
+                  </p>
                   
                 </div>
 
@@ -92,9 +102,24 @@
              blockchain_state.forEach( (block, i ) => {
                create_new_block(blockchain_state[i])
              });
+
+             let validate_chain_btn = document.querySelector(".js-valid-chain-btn");
+
+             validate_chain_btn.onclick = () => {
+
+              console.log("Checking validity...")
+
+              axios({
+                method: 'post',
+                url: '/is_chain_valid'
+               // data: data_obj
+              })
+              .then( data => {
+                console.log("SUCCESSFUL AJAX REQUEST")
+                console.log(data)
+              })
+             } // end click handler
  
-             // console.log("Whoel chain:")
-             // console.log(blockchain_state)
         </script>
     </body>
 </html>

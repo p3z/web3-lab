@@ -60,6 +60,8 @@ class Blockchain {
     }
   
     is_chain_valid = (chain) => {
+
+      console.log("Is chain valid running...")
   
       let prev_block = chain[0];
       let block_index = 1;
@@ -67,7 +69,7 @@ class Blockchain {
       while(block_index < chain.length){
           let block = chain[block_index];
   
-          if( block.previous_hash !== this.hash(prev_block)){
+          if( block.previous_hash !== this.get_block_hash(prev_block)){
             return false;
           }
   
@@ -80,6 +82,7 @@ class Blockchain {
   
   
           if (hash.substr(0, 4) !== "0000"){
+            console.log("Chain is NOT valid!")
             return false;
           }
   
@@ -87,6 +90,7 @@ class Blockchain {
           block_index++;
       }
   
+      console.log("Chain is valid!")
       return true;
   
     }

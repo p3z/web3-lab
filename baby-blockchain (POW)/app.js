@@ -9,7 +9,8 @@ app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
-  })); 
+})); 
+
 app.use(bodyParser.json());
 
 
@@ -25,6 +26,18 @@ app.get('/', (req, res) => {
   res.render('index', {chain: blockchain_state} );
 
 
+});
+
+app.post('/is_chain_valid', (req, res) => {
+  
+  let data = {
+    is_valid: blockchain_inst.is_chain_valid(blockchain_inst.chain)
+  }
+
+  console.log(data)
+  return JSON.stringify(data); // We may want to add more data later, hence using json
+  // 27/06/22 
+  // Has right data, but not object returning empty for some reason... fix this later
 });
 
 app.get('/get_chain', (req, res) => {
