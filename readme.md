@@ -13,6 +13,8 @@ An assortment of files and projects orbiting my learning of web3 technologies.
 - [CryptoDevHub](https://cryptodevhub.io/wiki/)
   - A curated list of blockchain resources, tools, and communities
 - [DappUniversity](https://www.dappuniversity.com/)
-  - A structured approach to learning Web3 technologies
-- [awesome-web3-resources] (https://github.com/p3z/awesome-web3-resources)
+  - A structured approach to learning Web3 technologies (some free, some paid)
+- [Awesome web3 resources] (https://github.com/p3z/awesome-web3-resources)
   - A curated list of more resources
+- [LearnWeb3.io](https://www.learnweb3.io/)
+  - A curiculum based aproach to learning web technologies (free!)
