@@ -19,5 +19,7 @@ An assortment of files and projects orbiting my learning of web3 technologies.
   - A curated list of more resources
 - [LearnWeb3.io](https://www.learnweb3.io/)
   - A curiculum based aproach to learning web technologies (free!)
-  - [Youtube course: Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=113722s)
+- [Youtube course: Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=113722s)
     - A 32 hour course presented by [Free Code Camp](freecodecamp.org)
+- [OpenSea Docs](https://docs.opensea.io/docs/1-structuring-your-smart-contract)
+    - Provides instructions on how to mint NFT contracts to be compatible with OpenSea
