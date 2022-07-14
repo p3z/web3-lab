@@ -6,7 +6,7 @@ contract DappToken {
     string  public name = "DApp Token";
     string  public symbol = "DAPP";
     string  public standard = "DApp Token v1.0";
-    uint256 public totalSupply;
+    uint256 public totalSupply; // Is set in the constructor
 
     event Transfer(
         address indexed _from,
@@ -23,7 +23,12 @@ contract DappToken {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
+<<<<<<< Updated upstream
     constructor (uint256 _initialSupply) public {
+=======
+    // Constructor (sol 0.4.2, deprecated syntax)
+    function DappToken (uint256 _initialSupply) public {
+>>>>>>> Stashed changes
         balanceOf[msg.sender] = _initialSupply;
         totalSupply = _initialSupply;
     }
