@@ -581,4 +581,6 @@ export const abi = [
      "type": "receive"
    }
  ];
-export const NFT_CONTRACT_ADDRESS = "0x156144AD315efb76cbeC76397C07132069592672";
+export const NFT_CONTRACT_ADDRESS = "0xD1804F8aD61f775397e70B8fC3Fffb62B662D575";
+
+// old: 0x156144AD315efb76cbeC76397C07132069592672 (This tutorial has us deploy twice, focusing on different aspects each time. The address above is the latest)
