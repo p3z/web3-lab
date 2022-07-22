@@ -24,3 +24,5 @@ An assortment of files and projects orbiting my learning of web3 technologies.
     - [Code and curiculum](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 - [OpenSea Docs](https://docs.opensea.io/docs/1-structuring-your-smart-contract)
     - Provides instructions on how to mint NFT contracts to be compatible with OpenSea
+- [Solidity by example](https://solidity-by-example.org/)
+    - Solidity smart contract tutorials from beginner to advanced.
