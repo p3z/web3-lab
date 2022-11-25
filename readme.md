@@ -8,7 +8,8 @@ An assortment of files and projects orbiting my learning of web3 technologies.
 - Baby blockchain: A rudimentary proof-of-work blockchain built using javascript (specifically express framework)
 - Example sol contracts: A repo of solidity contracts from various sources for the sake of studying
 - learn-web-3-projects: A place to store my progress in following along with the [LearnWeb3.io](https://www.learnweb3.io/) curriculum
-- web3 roadmap: Literally an editable image file (use draw.io) used to keep track of progress and put things into greater context.
+- web3 roadmap: Literally an editable image file (use draw.io) used to keep track of progress and put things into greater context. (Deprecated)
+  - [Roadmap.sh](https://roadmap.sh/blockchain): A more comprehensive third party roadmap someone's already put together, switching to this!
 
 ## Misc. Resources
 - [CryptoDevHub](https://cryptodevhub.io/wiki/)
