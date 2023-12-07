@@ -31,7 +31,7 @@
             <!-- Heading Row-->
             <div class="row gx-4 gx-lg-5 align-items-center my-5">
                 <div class="col-lg-7">
-                  <img class="img-fluid rounded mb-4 mb-lg-0" src="../static/chain.gif" style="height: 400px; width: 900px; object-fit: cover" alt="..." />
+                  <!-- <img class="img-fluid rounded mb-4 mb-lg-0" src="../static/chain.gif" style="height: 400px; width: 900px; object-fit: cover" alt="..." /> -->
                 </div>
                 <div class="col-lg-5">
                     <h1 class="font-weight-light">Proof of concept</h1>
@@ -116,7 +116,7 @@
               })
               .then( data => {
                 console.log("SUCCESSFUL AJAX REQUEST")
-                console.log(data)
+                console.log(JSON.parse(data))
               })
              } // end click handler
  

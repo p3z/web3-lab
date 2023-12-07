@@ -23,6 +23,8 @@ app.get('/', (req, res) => {
 
   let blockchain_state = JSON.stringify(blockchain_inst.chain);
 
+  console.log(blockchain_state)
+
   res.render('index', {chain: blockchain_state} );
 
 
@@ -48,11 +50,15 @@ app.get('/get_chain', (req, res) => {
 
 app.post('/mine_block', (req, res) => {
 
+  
+
   let previous_block = blockchain_inst.get_previous_block();
+  console.log(previous_block)
   let previous_proof = previous_block.proof;
-  let proof = blockchain_inst.proof_of_work(previous_proof);
+  let new_proof = blockchain_inst.proof_of_work(previous_proof);
   let previous_hash = blockchain_inst.get_block_hash(previous_block);
-  blockchain_inst.add_new_block(proof, previous_hash);
+  blockchain_inst.add_new_block(new_proof, previous_hash, req.body.block_data);
+  
 
   res.redirect('back');
 
